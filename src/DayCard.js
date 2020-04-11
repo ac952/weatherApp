@@ -1,6 +1,7 @@
 import React from 'react';
 var moment = require('moment');
 
+
 const DayCard = ({reading, degreeType}) => {
  let newDate = new Date();
   const weekday = reading.dt * 1000
@@ -13,7 +14,7 @@ const DayCard = ({reading, degreeType}) => {
   const imgURL = `owf owf-${reading.weather[0].id} owf-5x`
 
     return (
-          <div className="col-sm-2">
+          <div >
             <div className="card">
               <h3 className="card-title">{moment(newDate).format('dddd')}</h3>
               <p className="text-muted">{moment(newDate).format('MMMM Do, h:mm a')}</p>
